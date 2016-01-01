@@ -2,7 +2,7 @@ minetest.register_privilege("delprotect","Ignore player protection")
 
 protector = {}
 protector.mod = "redo"
-protector.radius = (tonumber(minetest.setting_get("protector_radius")) or 5)
+protector.radius = (tonumber(minetest.setting_get("protector_radius")) or 10)
 protector.drop = minetest.setting_getbool("protector_drop") or false
 protector.hurt = (tonumber(minetest.setting_get("protector_hurt")) or 0)
 
@@ -338,7 +338,7 @@ minetest.register_node("protector:protect", {
 })
 
 minetest.register_craft({
-	output = "protector:protect",
+	output = "protector:protect 5",
 	recipe = {
 		{"default:stone", "default:stone", "default:stone"},
 		{"default:stone", "default:steel_ingot", "default:stone"},
@@ -417,7 +417,7 @@ minetest.register_node("protector:protect2", {
 })
 
 minetest.register_craft({
-	output = "protector:protect2",
+	output = "protector:protect2 5",
 	recipe = {
 		{"default:stone", "default:stone", "default:stone"},
 		{"default:stone", "default:copper_ingot", "default:stone"},
