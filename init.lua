@@ -2,7 +2,7 @@ minetest.register_privilege("delprotect","Ignore player protection")
 
 protector = {}
 protector.mod = "redo"
-protector.radius = (tonumber(minetest.setting_get("protector_radius")) or 10)
+protector.radius = (tonumber(minetest.setting_get("protector_radius")) or 5)
 protector.drop = minetest.setting_getbool("protector_drop") or false
 protector.hurt = (tonumber(minetest.setting_get("protector_hurt")) or 0)
 
